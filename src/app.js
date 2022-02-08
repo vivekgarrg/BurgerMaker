@@ -143,9 +143,57 @@ function renderButtons(){
   }
 }
 
+//This function is to show the incredients on the board used in the burger
 function  renderIngredientsBoard(){
+if(state.Patty)
+{
+  let ingr = document.getElementsByClassName('items')[0];
+  ingr.innerHTML = "Patty";
+}
+else{
+  let ingr = document.getElementsByClassName('items')[0];
+  ingr.innerHTML = "";
+}
 
+if(state.Tomatoes)
+{
+  let ingr = document.getElementsByClassName('items')[2];
+  ingr.innerHTML = "Tomatoes";
+}
+else{
+  let ingr = document.getElementsByClassName('items')[2];
+  ingr.innerHTML = "";
+}
 
+if(state.Onions)
+{
+  let ingr = document.getElementsByClassName('items')[3];
+  ingr.innerHTML = "Onions";
+}
+else{
+  let ingr = document.getElementsByClassName('items')[3];
+  ingr.innerHTML = "";
+}
+
+if(state.Lettuce)
+{
+  let ingr = document.getElementsByClassName('items')[4];
+  ingr.innerHTML = "Lettuce";
+}
+else{
+  let ingr = document.getElementsByClassName('items')[4];
+  ingr.innerHTML = "";
+}
+
+if(state.Cheese)
+{
+  let ingr = document.getElementsByClassName('items')[1];
+  ingr.innerHTML = "Cheese";
+}
+else{
+  let ingr = document.getElementsByClassName('items')[1];
+  ingr.innerHTML = "";
+}
 
 }
 
@@ -202,24 +250,4 @@ document.querySelector(".btn-lettuce").onclick = function () {
   state.Lettuce = !state.Lettuce;
   renderAll();
 };
-// Trial 2 - Setup event listener for the cheese button
 
-
-// Trial 2 - Setup event listener for the tomatoes button
-
-
-// Trial 2 - Setup event listener for the onion button
-
-
-// Trial 2 - Setup event listener for the lettuce button
-
-
-//Challenge 1 - Add/Remove the class active to the buttons based on state
-
-
-//Challenge 2 - Render only the items selected in the ingredients board based on the state
-
-
-//Judgement 1
-//In the p element having price-details as the class, display the calculated
-//price based on ingredients
